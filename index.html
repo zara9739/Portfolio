@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zara Afzal - MERN Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-success fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PORTFOLIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">SKILLS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">PROJECTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="d-flex align-items-center bg-dark">
+        <div class="container">
+            <div class="row">
+                <!-- Left Side: Static and Auto-typing Text -->
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <h1>Hi, I'm Zara</h1>
+                    <h2><span class="auto-type"></span></h2>
+                    <!-- New Paragraph -->
+                    <p>I am a MERN Stack Developer with a passion for building user-friendly web applications.</p>
+                    <!-- Download CV Button -->
+                    <div class="mt-4">
+                        <a href="photos/Cv (2).pdf" class="btn btn-lg btn-success animated-btn" download>Download CV</a>
+                    </div>   
+                </div>
+    
+                <!-- Right Side: Image -->
+                <div class="col-lg-6 text-center p-4">
+                    <img src="photos/home1.gif" alt="Zara Afzal" class="img-fluid rounded-circle slide-in" style="max-width: 600px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- About Section -->
+    <section id="about" class="p-5 bg-secondary text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="text-center text-light mb-4">ABOUT ME</h1>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center text-center">
+                <!-- Left Side (Image with Slide-in Animation and More Data) -->
+                <div class="col-md-6 col-sm-12 mb-4">
+                    <img src="photos/GR7w.gif" alt="About Me Image" class="img-fluid slide-in-left mb-3">
+                </div>
+    
+                <!-- Right Side (Information about Developer with Padding) -->
+                <div class="col-md-6 col-sm-12 about-info px-4 py-3 ">
+                    <p class="lead text-center text-md-start fs-sm-5 d-none d-md-block ">
+                        I'm passionate about building web applications that provide an intuitive user experience. 
+                        With a solid understanding of both frontend and backend technologies, I enjoy working on complex 
+                        projects that require innovative problem-solving skills. I also have experience working with various 
+                        database management systems, including SQL, MySQL, and Oracle, ensuring efficient data handling and storage solutions.
+                    </p>
+                    <p class="lead text-center text-md-start fs-sm-5">
+                        As a frontend developer, I am skilled in creating visually appealing, user-friendly interfaces 
+                        that adapt seamlessly to different screen sizes, ensuring a great experience on any device.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Skills Section -->
+    <section id="skills" class="p-5 bg-dark text-light">
+        <div class="container">
+            <!-- Skills Heading -->
+            <h2 class="text-center text-success mt-3 mb-4">SKILLS</h2>
+    
+            <div class="row text-center g-4">
+                <!-- JavaScript -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <img src="photos/javascript.gif" alt="JavaScript" class="img-fluid skill-image">
+                        <h4 class="mt-3">JavaScript</h4>
+                    </div>
+                </div>
+                <!-- React.js -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <img src="photos/react.gif" alt="React.js" class="img-fluid skill-image">
+                        <h4 class="mt-3">React.js</h4>
+                    </div>
+                </div>
+                <!-- Node.js -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <img src="photos/R.gif" alt="Node.js" class="img-fluid skill-image">
+                        <h4 class="mt-3">Node.js</h4>
+                    </div>
+                </div>
+                <!-- MongoDB -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <img src="photos/mongoDb.gif" alt="MongoDB" class="img-fluid skill-image mt-2 w-70">
+                        <h4 class="mt-5">MongoDB</h4>
+                    </div>
+                </div>
+                <!-- HTML5 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <img src="photos/html.gif" alt="HTML5" class="img-fluid skill-image">
+                        <h4 class="mt-3">HTML5</h4>
+                    </div>
+                </div>
+                <!-- CSS3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <img src="photos/css.gif" alt="CSS3" class="img-fluid skill-image">
+                        <h4 class="mt-3">CSS3</h4>
+                    </div>
+                </div>
+                <!-- Bootstrap -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <img src="photos/bootstrap.gif" alt="Bootstrap" class="img-fluid skill-image">
+                        <h4 class="mt-3">Bootstrap</h4>
+                    </div>
+                </div>
+                <!-- Databases -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <img src="photos/databases.gif" alt="Databases" class="img-fluid skill-image">
+                        <h4 class="mt-3">Databases</h4>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Tools Heading -->
+            <h2 class="text-center text-success mt-5 mb-4">TOOLS</h2>
+            <div class="row text-center g-4">
+                <!-- Visual Studio Code -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="tool-item">
+                        <img src="photos/vscode.gif" alt="Visual Studio Code" class="img-fluid tool-image">
+                        <h4 class="mt-3">Visual Studio Code</h4>
+                    </div>
+                </div>
+                <!-- GitHub -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="tool-item">
+                        <img src="photos/github.gif" alt="GitHub" class="img-fluid tool-image">
+                        <h4 class="mt-3">GitHub</h4>
+                    </div>
+                </div>
+                <!-- Replit -->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="tool-item">
+                        <img src="photos/replit.webp" alt="Replit" class="img-fluid tool-image">
+                        <h4 class="mt-3">Replit</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section id="projects" class="p-5 bg-secondary text-light">
+    <div class="container">
+        <h2 class="text-center text-light mb-5">PROJECTS</h2>
+        <div class="row g-4">
+            <!-- Project 1 -->
+            <div class="col-md-4">
+                <div class="card same-size-card">
+                    <img src="photos/Technoit.JPG" class="card-img-top" alt="Project 1 Image">
+                    <div class="card-body bg-dark">
+                        <h5 class="card-title text-success">TechnoIT Project</h5>
+                        <p class="card-text small-text">The Techno IT website project features a fully responsive design built with Bootstrap, ensuring an optimal user experience across devices. Users can sign in, and upon signing up, they will be redirected to the home page after entering their details. Incorporates modern UI elements to create an intuitive interface.</p>
+                        <a href="https://zara9739.github.io/Modern_TechnoIT/" class="btn btn-success animated-btn" target="_blank">VISIT ME</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4">
+                <div class="card same-size-card">
+                    <img src="photos/calculator.JPG" class="card-img-top" alt="Project 2 Image">
+                    <div class="card-body bg-dark">
+                        <h5 class="card-title text-success">Calculator Project</h5>
+                        <p class="card-text small-text">The calculator project is a web-based application that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It features a user-friendly interface with buttons for each operation and a display area to show input and results. Built with JavaScript, HTML, and CSS.</p>
+                        <a href="https://zara9739.github.io/Calculator/" class="btn btn-success animated-btn" target="_blank">VISIT ME</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4">
+                <div class="card same-size-card">
+                    <img src="photos/tictactoe.JPG" class="card-img-top" alt="Project 3 Image">
+                    <div class="card-body bg-dark">
+                        <h5 class="card-title text-success">TicTacToe Project</h5>
+                        <p class="card-text small-text">The Tic-Tac-Toe project is an interactive web-based game that allows two players to compete in a classic grid format. Built with HTML, CSS, and JavaScript, the application features a responsive design and real-time gameplay, ensuring an engaging user experience, game reset feature for continuous gameplay.</p>
+                        <a href="https://zara9739.github.io/TicTacToe_Game/" class="btn btn-success animated-btn" target="_blank">VISIT ME</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-5 bg-dark text-light">
+        <div class="container">
+            <h2 class="text-center text-success mb-4">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form  id="contact-form" >
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input name="user_name" type="text" class="form-control border-success" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input name="user_email" type="email" class="form-control border-success" id="email" placeholder="Your Email" required >
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea name="user_message" class="form-control border-success" id="message" placeholder="Your Message....." rows="4" required ></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-md-lg btn-success animated-btn">Send Message</button>
+                            <h4 class="contact__message" id="contact-message" style="color: white; text-align: center; margin-top: 10px;"></h4>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+   
+    
+    <footer class="bg-dark text-light py-4 position-relative">
+        <div class="container">
+            <div class="row">
+                <!-- Left Section (Copyright) -->
+                <div class="col-md-6 text-left pl-sm-5 text-md-start order-2 order-md-1">
+                    <p>&copy; 2024 Portfolio | All Rights Reserved</p>
+                </div>
+    
+                <!-- Right Section (Social Media Links) -->
+                <div class="col-md-6 text-center text-md-end order-1 order-md-2 mb-2">
+                    <a href="https://www.linkedin.com/in/zara-afzal-8a0a4b329/" class="text-light mx-2 link" target="_blank">
+                        <i class="fab fa-linkedin fa-2x bg-info"></i>
+                    </a>
+                    <a href="https://github.com/zara9739" class="text-light mx-2 link" target="_blank">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="mailto:ranaafzaal401@gmail.com?" class="mx-2 link-envelope">
+                        <i class="fas fa-envelope fa-2x text-warning"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Scroll to Top Button -->
+        <a href="#" id="scrollTopBtn" class="btn btn-success animated-btn position-fixed bottom-0 end-0 m-3" style="display: none;">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

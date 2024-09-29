@@ -1,0 +1,339 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    padding: 10px 20px; /* Adjusted padding around the navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding-left: 10px; /* Adds space between brand text and the left side */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Aligns the navbar items to the right */
+}
+
+
+.navbar-toggler {
+    border: none; /* Removes the border around the hamburger menu */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Removes the focus outline around the toggler */
+}
+
+
+/* Basic styling for navbar links */
+.nav-item .nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: color 0.4s ease; /* Smooth color transition */
+}
+
+/* Background fill effect */
+.nav-item .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease; /* Smooth scaling of the background */
+}
+
+.nav-item .nav-link:hover::before {
+    transform: scaleX(1); /* Expand background to full width */
+    transform-origin: left; /* From left to right */
+}
+
+.nav-item .nav-link:hover {
+    color: #198754; /* Change text color on hover to match the background */
+}
+
+/* Ensure the text is above the background */
+.nav-item .nav-link {
+    position: relative;
+    z-index: 1; /* Keeps the text above the animated background */
+}
+/* Basic styling for navbar links */
+.nav-item .nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+/* Border effect on hover */
+.nav-item .nav-link::before, 
+.nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.nav-item .nav-link::before {
+    top: 0; /* Top border */
+    transform: translateX(-100%); /* Start from left */
+}
+
+.nav-item .nav-link::after {
+    bottom: 0; /* Bottom border */
+    transform: translateX(100%); /* Start from right */
+}
+
+.nav-item .nav-link:hover::before {
+    transform: translateX(0); /* Reveal top border */
+}
+
+.nav-item .nav-link:hover::after {
+    transform: translateX(0); /* Reveal bottom border */
+}
+
+/* Hover color change */
+.nav-item .nav-link:hover {
+    color: #000000; /* Slight color change on hover */
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Home Section */
+#home h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #196b34;
+}
+.animated-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.animated-btn:hover {
+    box-shadow: 0 0 15px rgb(19, 253, 117);
+    transform: scale(1.1);
+}
+
+.animated-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.animated-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+/* Set the image to be responsive */
+img {
+    width: 100%;
+    height: auto; /* This ensures the height is proportional to the width */
+     /* Limits the max width to 600px */
+}
+
+/* Slide-in Animation */
+.slide-in {
+    opacity: 0; /* Initially hide the image */
+    transform: translateX(100%); /* Start from the right (outside the screen) */
+    animation: slideIn 2s forwards; /* Apply the animation */
+}
+
+/* Keyframes for Slide-In Animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%); /* Image starts off-screen to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Image slides into its normal position */
+    }
+}
+/* About Section */
+
+ /* Slide-in animation for the image */
+ .slide-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 1.5s ease-in-out;
+}
+
+/* Trigger animation when the section comes into view */
+#about.visible .slide-in-left {
+    transform: translateX(0);
+    opacity: 1;
+}
+.about-info {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+/* Animation trigger when in view */
+.about-info.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Skills Section */
+#skills {
+    padding: 80px 0;
+}
+
+#skills h2 {
+    margin-bottom: 40px;
+}
+.skill-image, .tool-image {
+    width: 85px;
+    height: auto;
+}
+
+.skill-item, .tool-item {
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(9, 136, 73, 0.1);
+}
+
+.skill-item:hover, .tool-item:hover {
+    background-color: #196b34;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.container h2 {
+    font-weight: bold;
+}
+
+/* Experience Section */
+
+/* Container with perspective for 3D depth effect */
+.row.g-4 {
+    perspective: 1000px; /* Adds a 3D effect */
+}
+
+/* Default card styling */
+.same-size-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease; /* Smoother animation */
+}
+
+/* Zoom and depth effect based on screen size */
+.same-size-card:hover {
+    transform: scale(calc(1 + 0.3 * (100vh / 1000))); /* Responsive zoom based on screen height */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5); /* Larger shadow for more depth */
+    z-index: 10; /* Bring hovered card on top */
+}
+
+/* Non-hovered cards move slightly back and become transparent */
+.row.g-4:hover .same-size-card:not(:hover) {
+    transform: scale(0.85) rotateY(-10deg); /* Shrinks and rotates non-hovered cards */
+    opacity: 0.5; /* Makes non-hovered cards more transparent */
+    z-index: 1; /* Ensure they stay behind */
+}
+
+/* Image zoom on hover */
+.same-size-card:hover {
+    transform: scale(1.2); /* Slight zoom-in for the image */
+}
+
+
+    
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+}
+.form-control{
+    border: 3px solid green;
+}
+
+/* Footer */
+
+/* General hover effect for all social media icons */
+.link i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.link:hover i {
+    transform: scale(1.2); /* Scale the icon on hover */
+    color: #575c5f; /* Change color on hover */
+    text-decoration: none;
+}
+
+/* Specific hover effect for the envelope icon */
+.link-envelope i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.link-envelope:hover i {
+    color: #ffcc00; /* Yellow color on hover for the envelope */
+    transform: scale(1.2); /* Scale the envelope icon */
+}
+
